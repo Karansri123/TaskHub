@@ -2,12 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "seed": "ts-node src/seeders/role.seeder.ts",
-  "dev": "ts-node-dev --files src/index.ts",
-  "build": "tsc && cp package.json dist",
-  "start": "node dist/index.js"
-},
+  "scripts": {
+    "seed": "ts-node src/seeders/role.seeder.ts",
+    "dev": "ts-node-dev --files src/index.ts",
+    "build": "tsc && cp package.json dist",
+    "start": "node dist/index.js"
+  },
   "keywords": [],
   "author": "Karan Srivastava",
   "license": "ISC",
@@ -24,10 +24,12 @@
     "@types/passport-google-oauth20": "^2.0.16",
     "@types/passport-local": "^1.0.38",
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "cookie-session": "^2.1.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.6.1",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.2",
     "passport": "^0.5.3",
     "passport-google-oauth20": "^2.0.0",
@@ -36,5 +38,8 @@
     "typescript": "^5.7.2",
     "uuid": "^11.0.3",
     "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10"
   }
 }

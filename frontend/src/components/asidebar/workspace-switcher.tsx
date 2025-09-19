@@ -115,6 +115,7 @@ export function WorkspaceSwitcher() {
                 Workspaces
               </DropdownMenuLabel>
               {isPending ? <Loader className=" w-5 h-5 animate-spin" /> : null}
+
               {workspaces?.map((workspace) => (
                 <DropdownMenuItem
                   key={workspace._id}

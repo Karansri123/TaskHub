@@ -26,13 +26,12 @@ import { registerMutationFn } from "@/lib/api";
 import { toast } from "@/hooks/use-toast";
 import { Loader } from "lucide-react";
 
-
 const SignUp = () => {
-  const navigate = useNavigate()
-   const { mutate, isPending } = useMutation({
-      mutationFn: registerMutationFn,
-    });
+  const navigate = useNavigate();
 
+  const { mutate, isPending } = useMutation({
+    mutationFn: registerMutationFn,
+  });
   const formSchema = z.object({
     name: z.string().trim().min(1, {
       message: "Name is required",
@@ -55,20 +54,20 @@ const SignUp = () => {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    if(isPending) return;
-    mutate(values,{
-      onSuccess: ()=>{
-        navigate("/")
+    if (isPending) return;
+    mutate(values, {
+      onSuccess: () => {
+        navigate("/");
       },
-      onError:(error)=>{
+      onError: (error) => {
         console.log(error);
         toast({
-          title:"Error",
-          description:error.message,
-          variant:"destructive"
-        })
-      }
-    })
+          title: "Error",
+          description: error.message,
+          variant: "destructive",
+        });
+      },
+    });
   };
 
   return (
@@ -79,7 +78,7 @@ const SignUp = () => {
           className="flex items-center gap-2 self-center font-medium"
         >
           <Logo />
-          Task Hub.
+          TaskHub.
         </Link>
         <div className="flex flex-col gap-6">
           <Card>
@@ -168,7 +167,11 @@ const SignUp = () => {
                           )}
                         />
                       </div>
-                      <Button type="submit" disabled={isPending} className="w-full">
+                      <Button
+                        type="submit"
+                        disabled={isPending}
+                        className="w-full"
+                      >
                         {isPending && <Loader className="animate-spin" />}
                         Sign up
                       </Button>
