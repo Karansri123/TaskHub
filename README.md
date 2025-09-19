@@ -43,7 +43,7 @@ Auth: Google OAuth, JWT, Cookie Sessions
 
 UI/UX: TailwindCSS, Shadcn UI
 
-Other: REST APIs, Transactions, Analytics
+Other: REST APIs, Analytics
 
 🛠️ Installation & Setup
 
@@ -86,7 +86,6 @@ SESSION_SECRET=your_session_secret
 
 ⏳ Real-time Notifications (Socket.io)
 
-⏳ Kanban Board & Gantt Charts
 
 🤝 Contributing
 
